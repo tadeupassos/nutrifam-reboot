@@ -1,0 +1,39 @@
+<ion-content style="background-color:#FAFAFA">
+  <ion-buttons left>
+    <button ion-button icon-only style="background-color:#23D25B" (click)="voltarLogin()"><ion-icon name="arrow-back"></ion-icon></button>
+  </ion-buttons>
+  <br>
+  <ion-row>
+    <ion-col text-center style="margin-left: 20px; margin-right: 20px">
+      <div style="font-size: 150%">
+        Solicite ao RH da sua empresa
+      </div>
+      <span style="color: #B8B4B4">Cada empresa possui um código de acesso exclusivo, caso não tenha visto no painel de avisos, solicite ao RH.</span>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-list inset>
+        <ion-item class="campo">
+          <ion-input [(ngModel)]="nomeEmpresa" name="empresa" placeholder="Empresa" type="text"></ion-input>
+        </ion-item>
+        <ion-item class="campo">
+          <ion-input [(ngModel)]="funcionario" name="funcionario" placeholder="Nome do Funcionário" type="text"></ion-input>
+        </ion-item>
+        <ion-item class="campo">
+          <ion-input [(ngModel)]="periodo" name="escola" placeholder="Período" type="text"></ion-input>
+        </ion-item> 
+        <p *ngIf="camposVaziosRegistro" style="color: #eb0d0d;">Não pode haver campos vazios!</p>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col style="margin-left: 20px; margin-right: 20px">
+      <button ion-button full class="login-button" (tap)="enviarEmail()">Solicitar Contato</button>
+    </ion-col>
+  </ion-row>
+  <div>
+    <img src="assets/imgs/naocliente.png" />
+  </div>  
+</ion-content>
+  

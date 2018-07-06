@@ -1,0 +1,28 @@
+<ion-menu id="menuApp" [content]="conteudo" side="right">
+    <ion-header>
+        <ion-toolbar color="">
+        <ion-title style="text-align: left">Menu </ion-title>
+        </ion-toolbar>
+    </ion-header>
+    
+    <ion-content>
+    
+        <ion-list>
+    
+            <ion-item>
+                <button menuClose ion-button full clear color="estrela" style="font-size: 120%" (tap)="abrirBlog()">Blog</button>
+            </ion-item>
+            <ion-item>
+                <button menuClose ion-button full clear color="estrela" style="font-size: 120%" (tap)="abrirFaleConosco()">Fale Conosco</button>
+            </ion-item>
+            <ion-item>
+                <button menuClose ion-button full clear color="estrela" style="font-size: 120%" (tap)="Sair()">Sair</button>
+            </ion-item>
+    
+        </ion-list>
+    </ion-content>
+    
+</ion-menu>
+
+<ion-nav #conteudo [root]="rootPage" swipeBackEnabled="false"></ion-nav>
+    

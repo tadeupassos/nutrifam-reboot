@@ -1,0 +1,38 @@
+page-cardapio {
+
+    .card-background-page {
+        
+        ion-card {
+            position: relative;
+            text-align: center;
+        }
+    
+        .card-title {
+            position: absolute;
+            top: 45%;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: normal;
+            color: #fff;
+        }
+
+        .blog {
+            position: absolute;
+            top: 28%;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: normal;
+            color: #fff;
+        }       
+    
+        .card-subtitle {
+            font-size: 1.0em;
+            position: absolute;
+            top: 63%;
+            width: 100%;
+            color: #fff;
+        }
+        
+    }    
+
+}

@@ -1,0 +1,27 @@
+page-ultimos-eventos {
+
+    .imagem-logo {
+        
+        position: relative;
+        text-align: center;
+        
+        .titulo {
+            position: absolute;
+            top: 45%;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: normal;
+            color: #fff;
+        }   
+    
+        .sub-titulo {
+            font-size: 1.0em;
+            position: absolute;
+            top: 63%;
+            width: 100%;
+            color: #fff;
+        }
+        
+    }      
+
+}

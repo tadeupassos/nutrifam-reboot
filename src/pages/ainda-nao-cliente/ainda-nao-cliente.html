@@ -1,0 +1,45 @@
+<ion-content style="background-color:#FAFAFA">
+  <ion-buttons left>
+    <button ion-button icon-only style="background-color:#23D25B" (click)="voltarLogin()"><ion-icon name="arrow-back"></ion-icon></button>
+  </ion-buttons>
+  <br>
+  <br>
+  <ion-row>
+    <ion-col text-center>
+      <div style="font-size: 200%">
+        Ainda não é cliente?
+      </div>
+      <span>Marque uma emtrevista para formalizar o contrato.</span>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-list inset>
+        <ion-item class="campo">
+          <ion-input [(ngModel)]="nomeCliente" name="nome" placeholder="Nome" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item class="campo">
+          <ion-input [(ngModel)]="emailCliente" name="email" placeholder="E-mail" type="email"></ion-input>
+        </ion-item>
+
+        <ion-item class="campo">
+          <ion-input [(ngModel)]="escolaCliente" name="escola" placeholder="Escola" type="text"></ion-input>
+        </ion-item> 
+
+        <p *ngIf="camposVaziosRegistro" style="color: #eb0d0d;">Não pode haver campos vazios!</p>
+
+      </ion-list>
+
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col style="margin-left: 20px; margin-right: 20px">
+      <button ion-button full class="login-button" (tap)="enviarEmail()">Solicitar Contato</button>
+    </ion-col>
+  </ion-row>
+  <div>
+    <img src="assets/imgs/naocliente.png" />
+  </div>  
+</ion-content>

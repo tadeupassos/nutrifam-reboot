@@ -1,0 +1,120 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-buttons right>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button> 
+    </ion-buttons>     
+    <ion-row>
+      <ion-col text-center>
+        <img src="assets/imgs/logoNavBar.png" style="width: 30%"/>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content style="background-color:#f4f4f4">
+    
+    <div style="overflow: scroll">
+      <img src="assets/imgs/fundoLancheira4.png" style="width: 100%;"/>
+      <ion-slides>
+        <ion-slide>
+          <ion-row style="background-color:#f4f4f4">
+            <ion-col col-2>
+  
+            </ion-col>
+            <ion-col col-8>
+              <div style="margin-top: 5px; font-size: 120%; font-weight: bold">Segunda-feira, 15/05</div>
+            </ion-col>
+            <ion-col col-2 (tap)="proximoDia()">
+              <ion-icon style="font-size: 30px" name="ios-arrow-forward-outline"></ion-icon>
+            </ion-col>
+          </ion-row>
+        
+          <ion-card *ngFor="let dia of segunda" color="light" style="margin-top:20px">
+            <ion-card-header>
+              {{ dia.conteudo }}
+            </ion-card-header>
+          </ion-card>
+
+        </ion-slide>
+  
+        <ion-slide>
+          <ion-row>
+            <ion-col col-2 (tap)="diaAnterior()">
+              <ion-icon style="font-size: 30px" name="ios-arrow-back-outline"></ion-icon>
+            </ion-col>
+            <ion-col col-8>
+              <div style="margin-top: 5px; font-size: 120%; font-weight: bold">Terça-feira, 15/05</div>
+            </ion-col>
+            <ion-col col-2 (tap)="proximoDia()">
+              <ion-icon style="font-size: 30px" name="ios-arrow-forward-outline"></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-card *ngFor="let dia of terca" color="light" style="margin-top:20px">
+            <ion-card-header>
+              {{ dia.conteudo }}
+            </ion-card-header>
+          </ion-card>     
+        </ion-slide>
+  
+        <ion-slide>
+          <ion-row>
+            <ion-col col-2 (tap)="diaAnterior()">
+              <ion-icon style="font-size: 30px" name="ios-arrow-back-outline"></ion-icon>
+            </ion-col>
+            <ion-col col-8>
+              <div style="margin-top: 5px; font-size: 120%; font-weight: bold">Quarta-feira, 15/05</div>
+            </ion-col>
+            <ion-col col-2 (tap)="proximoDia()">
+              <ion-icon style="font-size: 30px" name="ios-arrow-forward-outline"></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-card *ngFor="let dia of quarta" color="light" style="margin-top:20px">
+            <ion-card-header>
+              {{ dia.conteudo }}
+            </ion-card-header>
+          </ion-card>     
+        </ion-slide>
+  
+        <ion-slide>
+          <ion-row>
+            <ion-col col-2 (tap)="diaAnterior()">
+              <ion-icon style="font-size: 30px" name="ios-arrow-back-outline"></ion-icon>
+            </ion-col>
+            <ion-col col-8>
+              <div style="margin-top: 5px; font-size: 120%; font-weight: bold">Quinta-feira, 15/05</div>
+            </ion-col>
+            <ion-col col-2 (tap)="proximoDia()">
+              <ion-icon style="font-size: 30px" name="ios-arrow-forward-outline"></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-card *ngFor="let dia of quinta" color="light" style="margin-top:20px">
+            <ion-card-header>
+              {{ dia.conteudo }}
+            </ion-card-header>
+          </ion-card>    
+        </ion-slide>
+  
+        <ion-slide>
+          <ion-row>
+            <ion-col col-2 (tap)="diaAnterior()">
+              <ion-icon style="font-size: 30px" name="ios-arrow-back-outline"></ion-icon>
+            </ion-col>
+            <ion-col col-8>
+              <div style="margin-top: 5px; font-size: 120%; font-weight: bold">Sexta-feira, 15/05</div>
+            </ion-col>
+            <ion-col col-2>
+              
+            </ion-col>
+          </ion-row>
+          <ion-card *ngFor="let dia of sexta" color="light" style="margin-top:20px">
+          <ion-card-header>
+            {{ dia.conteudo }}
+          </ion-card-header>
+        </ion-card>     
+        </ion-slide> 
+      </ion-slides>
+    </div>   
+  </ion-content>

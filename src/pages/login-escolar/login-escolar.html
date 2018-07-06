@@ -1,0 +1,45 @@
+<ion-content>
+  <div fullscreen id="fundo">
+    <ion-buttons left>
+      <button style="background-color: #E40D7E" ion-button icon-only (tap)="voltarLogin()"><ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-row>
+      <ion-col text-center>
+        <img src="assets/imgs/logoEscolar.png"  style="width: 80%; margin-top: 95px;"/>
+      </ion-col>
+    </ion-row>
+    <br>
+    <br>
+    <br>
+    <br>
+    <ion-row>
+      <ion-col text-center style="font-size: 110%; color:#ffffff">
+        Sirva-se!
+      </ion-col>
+    </ion-row>      
+    <ion-row>
+      <ion-col>
+        <ion-list style="margin-right: 20px; margin-left: 20px">
+          <ion-item class="campo" >
+            <ion-input (keyup)="numero()" [(ngModel)]="cpf" name="cpf" placeholder="Digite o seu CPF" type="text"></ion-input>
+          </ion-item>
+          <p text-center *ngIf="!cadastrado" style="color: #ffffff;">CPF não encontrado</p>
+          <p text-center *ngIf="camposVazios" style="color: #ffffff; font-size: 0.9em;">Não pode haver campos vazios!</p>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="margin-left: 20px; margin-right: 20px">
+        <button ion-button full class="login-button" (tap)="logarCPF()">Entrar</button>
+      </ion-col>
+    </ion-row>   
+    <ion-row>
+      <ion-col style="margin-top: 5px; margin-left:20px; margin-right: 20px;">
+        <button ion-button clear full style="text-transform: lowercase; color: black" (tap)="abrirNaoCliente()">
+          ainda não tem cadastro? peça aqui!
+        </button>
+      </ion-col>
+    </ion-row>       
+  </div>  
+</ion-content>
